@@ -26,9 +26,9 @@ const Products = ({ state, dispatch }) => {
             }}
           >
             <img
-              src={prod.thumbnail}
+              src={prod.image}
               alt={prod.title}
-              style={{ height: 200, objectFit: "cover" }}
+              style={{ height: 200, objectFit: "contain" }}
             />
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>{prod.title}</span>
@@ -40,7 +40,7 @@ const Products = ({ state, dispatch }) => {
                   padding: 5,
                   border: 0,
                   borderRadius: 5,
-                  backgroundColor: "#e53935",
+                  backgroundColor: "#e24e42",
                   color: "white",
                 }}
                 onClick={() =>
@@ -58,7 +58,7 @@ const Products = ({ state, dispatch }) => {
                   padding: 5,
                   border: 0,
                   borderRadius: 5,
-                  backgroundColor: "green",
+                  backgroundColor: "#008f95",
                   color: "white",
                 }}
                 onClick={() =>
@@ -67,7 +67,7 @@ const Products = ({ state, dispatch }) => {
                     payload: {
                       id: prod.id,
                       title: prod.title,
-                      thumbnail: prod.thumbnail,
+                      thumbnail: prod.image,
                       qty: 1,
                       price: prod.price,
                     },

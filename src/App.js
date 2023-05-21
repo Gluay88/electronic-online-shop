@@ -15,11 +15,10 @@ function App() {
   console.log(state);
 
   const fetchProduct = async () => {
-    const { data } = await axios.get("https://dummyjson.com/products");
-    // console.log(data.products);
+    const { data } = await axios.get("https://fakestoreapi.com/products");
     dispatch({
       type: "ADD_PRODUCTS",
-      payload: data.products,
+      payload: data,
     });
   };
 
